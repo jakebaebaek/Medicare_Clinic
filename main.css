@@ -68,7 +68,7 @@ video-player {
   align-items: center;
   justify-content:space-between
 }
-.recogStartBtn {
+.btnGroup1 {
   font-size: xx-large;
   justify-content: center;
   align-items: center;
@@ -77,6 +77,9 @@ video-player {
   background-color: rgb(70, 144, 254);
   color: rgb(235, 235, 235);
   padding: 10px 20px 10px 20px;
+}
+.sessionStartBtn {
+  background-color: seagreen;
 }
 .text-recognition {
   position: relative;

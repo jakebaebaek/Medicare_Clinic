@@ -6,7 +6,6 @@ const selectedLang = document.getElementById('lang-options');
 const input_lang = document.getElementById('input-langs');
 const subtitle = document.querySelector(".sub");
 const recogBtn = document.querySelector('.recogStartBtn');
-const audioOutput = document.getElementById('audio-output');
 
 let inut_langVal = input_lang.value;
 var recognition = new SpeechRecognition();

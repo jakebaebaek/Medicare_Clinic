@@ -64,15 +64,15 @@ async function joinSession() {
       
       const alluser = zoomVideo.getAllUser();
       console.log(alluser)
-      // await zoomVideo.join(topic, token, userName, password)
-      // stream = client.getMediaStream()
-      // zoomVideo.getAllUser().forEach(async (user) => {
-      //   if (user.bVideoOn) {
-      //     let userVideo = await stream.attachVideo(user.userId, 3)
+      await zoomVideo.join(topic, token, userName, password)
+      stream = client.getMediaStream()
+      zoomVideo.getAllUser().forEach(async (user) => {
+        if (user.bVideoOn) {
+          let userVideo = await stream.attachVideo(user.userId, 3)
       
-      //     document.querySelector('video-player-container').appendChild(userVideo)
-      //   }
-      // });
+          document.querySelector('video-player-container').appendChild(userVideo)
+        }
+      });
       
       // 화면 공유 기능 
       // if (stream.isStartShareScreenWithVideoElement()) {
