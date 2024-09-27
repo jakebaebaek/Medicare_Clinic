@@ -13,7 +13,7 @@ sessionStartBtn.addEventListener('click', function() {
 async function fetchToken(SessionName) {
     try {
       // 서버 엔드포인트에게 JWT 토큰을 요청합니다. - request
-      const response = await fetch("https://enigmatic-garden-56462-8b6392dd24e0.herokuapp.com/", {
+      const response = await fetch("http://localhost:4000/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",  
@@ -62,17 +62,17 @@ async function joinSession() {
           stream.renderVideo(video, zoomVideo.getCurrentUserInfo().userId, 2580, 1080, 10, 10, 10)
       }).then(() => stream.startAudio());   
       
-      const alluser = zoomVideo.getAllUser();
-      console.log(alluser)
-      await zoomVideo.join(topic, token, userName, password)
-      stream = client.getMediaStream()
-      zoomVideo.getAllUser().forEach(async (user) => {
-        if (user.bVideoOn) {
-          let userVideo = await stream.attachVideo(user.userId, 3)
+      // const alluser = zoomVideo.getAllUser();
+      // console.log(alluser)
+      // await zoomVideo.join(topic, token, userName, password)
+      // stream = client.getMediaStream()
+      // zoomVideo.getAllUser().forEach(async (user) => {
+      //   if (user.bVideoOn) {
+      //     let userVideo = await stream.attachVideo(user.userId, 3)
       
-          document.querySelector('video-player-container').appendChild(userVideo)
-        }
-      });
+      //     document.querySelector('video-player-container').appendChild(userVideo)
+      //   }
+      // });
       
       // 화면 공유 기능 
       // if (stream.isStartShareScreenWithVideoElement()) {
